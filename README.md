@@ -41,3 +41,41 @@ private val getIpgContent = registerForActivityResult(
         }
     }
 ```
+
+### Build an intent for the OnepayIPGActivity
+```
+val intent = Intent(this, OnepayIPGActivity::class.java)
+            val onepayIPGInit = OnepayIPGInit.Builder()
+                .setUser(
+                    Customer(
+                        firstName = "<<firstName>>",
+                        lastName = "<<lastName>>",
+                        phone = "<<phone with county code>>",
+                        email = "<<email>>"
+                    )
+                )
+                .setConfigurations(
+                    Configurations(
+                        token = "<<your token>>",
+                        appID = "<<your app id>>",
+                        hashKey = "<<your hash key>>"
+                    )
+                )
+                .setProduct(
+                    Product(
+                        reference = "<<reference>>",
+                        amount = <<amount>>,
+                        currency = OnepayIPGInit.CurrencyTypes.LKR,
+                        transactionOrder = arrayListOf(
+                            Product.TransactionItem(
+                                "abc",
+                                "001",
+                                2,
+                                21.35f
+                            )
+                        )
+                    )
+                )
+                .build()
+            intent.putExtra(OnepayIPG.IPG_DATA, onepayIPGInit)
+```
