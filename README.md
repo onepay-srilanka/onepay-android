@@ -79,3 +79,8 @@ val intent = Intent(this, OnepayIPGActivity::class.java)
                 .build()
             intent.putExtra(OnepayIPG.IPG_DATA, onepayIPGInit)
 ```
+
+### Launch the intent
+```
+getIpgContent.launch(intent)
+```
