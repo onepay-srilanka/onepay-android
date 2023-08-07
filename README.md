@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.onepay-srilanka:onepay-android:1.0.0'
+    implementation 'com.github.onepay-srilanka:onepay-android:1.0.1'
 }
 ```
 
