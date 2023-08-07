@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.onepay-srilanka</groupId>
   <artifactId>onepay-android</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>aar</packaging>
   <name>onepay-srilanka/onepay-android</name>
   <description>POM was created from install:install-file</description>
